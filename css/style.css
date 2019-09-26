@@ -1,0 +1,21 @@
+/* Fonts
+font-family: 'Creepster', cursive;
+font-family: 'Henny Penny', cursive;
+font-family: 'Griffy', cursive;
+
+Colour palette:
+F6F1EF - off white
+A89B8A - greyish
+DA4505 - orange
+9F8656 - Tan
+17161A- Black
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #17161A;
+    font-family: 'Creepster', cursive;
+    color: #F6F1EF;
+}
