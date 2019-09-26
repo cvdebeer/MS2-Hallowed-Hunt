@@ -64,4 +64,14 @@ body {
     padding: 20px;
     position: absolute;
     background: #DA4505;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.game-card.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
