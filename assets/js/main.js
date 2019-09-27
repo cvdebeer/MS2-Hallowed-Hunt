@@ -6,7 +6,6 @@ let cardOne, cardTwo;
 // make the card flip
 function flipCard() {
     this.classList.toggle('flip');
-
     //Picking two cards to match
     if (!cardHasFlipped) {
         cardHasFlipped = true;
@@ -16,21 +15,27 @@ function flipCard() {
         cardHasFlipped = false;
         cardTwo = this;
         //console.log({cardOne,cardTwo});
-
-        // do cards match ??
-        if (cardOne.dataset.check === cardTwo.dataset.check) {
-            cardOne.removeEventListener('click', flipCard);
-            cardTwo.removeEventListener('click', flipCard);
-            //console.log('Matched')
-        } else {
-            //need to allow some time for the second card to flip over if it is incorrect.
-            setTimeout(() => {
-                cardOne.classList.remove('flip');
-                cardTwo.classList.remove('flip');
-                //console.log('unmatched');
-            }, 1500);
-        };
+        matchChecking();
     }
+}
+// this function will check if card one matched card Two
+function matchChecking() {
+    let match = cardOne.dataset.check === cardTwo.dataset.check
+    match ? stopClick() : unFlip();
+}
+//  this function allows some time for the second card to flip over if it is incorrect
+function unFlip() {
+    setTimeout(() => {
+        cardOne.classList.remove('flip');
+        cardTwo.classList.remove('flip');
+        //console.log('unmatched');
+    }, 1500);
+}
+
+// this function stops the user from clicking the matched card.
+function stopClick() {
+    cardOne.removeEventListener('click', flipCard);
+    cardTwo.removeEventListener('click', flipCard);
 }
 
 
