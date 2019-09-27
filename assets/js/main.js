@@ -19,8 +19,12 @@ function flipCard() {
 
         // do cards match ??
         if (cardOne.dataset.check === cardTwo.dataset.check) {
+            cardOne.removeEventListener('click', flipCard);
+            cardTwo.removeEventListener('click', flipCard);
             console.log('Matched')
         } else {
+            cardOne.classList.remove('flip');
+            cardTwo.classList.remove('flip');
             console.log('unmatched');
         }
     }
