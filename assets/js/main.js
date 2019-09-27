@@ -18,8 +18,11 @@ function flipCard() {
         //console.log({cardOne,cardTwo});
 
         // do cards match ??
-        console.log(cardOne.dataset.check);
-        console.log(cardTwo.dataset.check);
+        if (cardOne.dataset.check === cardTwo.dataset.check) {
+            console.log('Matched')
+        } else {
+            console.log('unmatched');
+        }
     }
 }
 
