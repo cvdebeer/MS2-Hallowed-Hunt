@@ -55,6 +55,13 @@ body {
     height: calc(33% - 10px);
     margin: 5px;
     position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .card-front,
@@ -69,6 +76,14 @@ body {
 }
 
 .game-card.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.card-front {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
