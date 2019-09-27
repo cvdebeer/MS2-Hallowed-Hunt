@@ -21,12 +21,15 @@ function flipCard() {
         if (cardOne.dataset.check === cardTwo.dataset.check) {
             cardOne.removeEventListener('click', flipCard);
             cardTwo.removeEventListener('click', flipCard);
-            console.log('Matched')
+            //console.log('Matched')
         } else {
-            cardOne.classList.remove('flip');
-            cardTwo.classList.remove('flip');
-            console.log('unmatched');
-        }
+            //need to allow some time for the second card to flip over if it is incorrect.
+            setTimeout(() => {
+                cardOne.classList.remove('flip');
+                cardTwo.classList.remove('flip');
+                //console.log('unmatched');
+            }, 1500);
+        };
     }
 }
 
