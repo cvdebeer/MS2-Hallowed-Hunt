@@ -38,6 +38,10 @@ function stopClick() {
     cardTwo.removeEventListener('click', flipCard);
 }
 
-
+function playAudio() {
+    var audio = new Audio('assets/card-flip.wav');
+    audio.play();
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => card.addEventListener('click', playAudio));
