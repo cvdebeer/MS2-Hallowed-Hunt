@@ -2,6 +2,7 @@ const cards = document.querySelectorAll('.game-card');
 const faceCards = [`assets/img/treaters.svg`, `assets/img/headless_skeleton.svg`, `assets/img/spider.svg`, `assets/img/spider.svg`, `assets/img/witchandpump.svg`, `assets/img/black_cat.svg`, `assets/img/treaters.svg`, `assets/img/ghost.svg`, `assets/img/witchandpump.svg`, `assets/img/ghost.svg`, `assets/img/black_cat.svg`, `assets/img/headless_skeleton.svg`]
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
+const reset = document.querySelector('#game-reset');
 
 let cardHasFlipped = false;
 let blockOverClick = false;
@@ -94,6 +95,7 @@ function shuffleCards() {
 
 
 
-sound.addEventListener('click', audioButton)
+sound.addEventListener('click', audioButton);
+reset.addEventListener('click', shuffleCards);
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', playAudio));
