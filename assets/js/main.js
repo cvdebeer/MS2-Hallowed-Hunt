@@ -1,5 +1,4 @@
 const cards = document.querySelectorAll('.game-card');
-const faceCards = [`assets/img/treaters.svg`, `assets/img/headless_skeleton.svg`, `assets/img/spider.svg`, `assets/img/spider.svg`, `assets/img/witchandpump.svg`, `assets/img/black_cat.svg`, `assets/img/treaters.svg`, `assets/img/ghost.svg`, `assets/img/witchandpump.svg`, `assets/img/ghost.svg`, `assets/img/black_cat.svg`, `assets/img/headless_skeleton.svg`]
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
 const reset = document.querySelector('#game-reset');
@@ -73,8 +72,6 @@ function audioButton() {
         sound.innerHTML = "ON";
     }
 }
-
-
 
 function resetGameBoard() {
     [cardHasFlipped, blockOverClick] = [false, false];
