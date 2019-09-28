@@ -1,11 +1,12 @@
 const cards = document.querySelectorAll('.game-card');
-
+const faceCards = [`assets/img/treaters.svg`, `assets/img/headless_skeleton.svg`, `assets/img/spider.svg`, `assets/img/spider.svg`, `assets/img/witchandpump.svg`, `assets/img/black_cat.svg`, `assets/img/treaters.svg`, `assets/img/ghost.svg`, `assets/img/witchandpump.svg`, `assets/img/ghost.svg`, `assets/img/black_cat.svg`, `assets/img/headless_skeleton.svg`]
 let cardHasFlipped = false;
 let blockOverClick = false;
 let cardOne, cardTwo;
 
 // make the card flip
 function flipCard() {
+
     // block from clicking too many card
     if (blockOverClick) return;
     // block from clicking the same card twice
@@ -23,7 +24,7 @@ function flipCard() {
     //2nd card
     cardHasFlipped = false;
     cardTwo = this;
-    //console.log({cardOne,cardTwo});
+    // console.log({cardOne,cardTwo });
     matchChecking();
 }
 
@@ -52,7 +53,7 @@ function stopClick() {
 
     resetGameBoard();
 }
-
+// this function allows the sound effects when clicking the cards
 function playAudio() {
     var audio = new Audio('assets/card-flip.wav');
     audio.play();
@@ -62,6 +63,21 @@ function resetGameBoard() {
     [cardHasFlipped, blockOverClick] = [false, false];
     [cardOne, cardTwo] = [null, null];
 }
+
+//this function is to reset/restart the game board and unflip all the cards.
+function shuffleCards() {
+    cards.forEach(card => {
+        card.classList.remove('flip');
+    });
+    cards.forEach(card => {
+        let randomMix = Math.floor(Math.random() * 12);
+        card.style.order = randomMix;
+    });
+    cards.forEach(card => card.addEventListener('click', flipCard));
+};
+
+
+
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', playAudio));
