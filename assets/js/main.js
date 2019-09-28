@@ -1,8 +1,12 @@
 const cards = document.querySelectorAll('.game-card');
 const faceCards = [`assets/img/treaters.svg`, `assets/img/headless_skeleton.svg`, `assets/img/spider.svg`, `assets/img/spider.svg`, `assets/img/witchandpump.svg`, `assets/img/black_cat.svg`, `assets/img/treaters.svg`, `assets/img/ghost.svg`, `assets/img/witchandpump.svg`, `assets/img/ghost.svg`, `assets/img/black_cat.svg`, `assets/img/headless_skeleton.svg`]
+const audio = new Audio('assets/card-flip.wav');
+const sound = document.querySelector('#sound')
+
 let cardHasFlipped = false;
 let blockOverClick = false;
 let cardOne, cardTwo;
+
 
 // make the card flip
 function flipCard() {
@@ -55,9 +59,21 @@ function stopClick() {
 }
 // this function allows the sound effects when clicking the cards
 function playAudio() {
-    var audio = new Audio('assets/card-flip.wav');
     audio.play();
 }
+
+// switches sound effects on when you click the ON/OFF button
+function audioButton() {
+    if (sound.innerHTML == 'ON') {
+        cards.forEach(card => card.removeEventListener('click', playAudio));
+        sound.innerHTML = "OFF";
+    } else {
+        cards.forEach(card => card.addEventListener('click', playAudio));
+        sound.innerHTML = "ON";
+    }
+}
+
+
 
 function resetGameBoard() {
     [cardHasFlipped, blockOverClick] = [false, false];
@@ -78,6 +94,6 @@ function shuffleCards() {
 
 
 
-
+sound.addEventListener('click', audioButton)
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', playAudio));
