@@ -16,7 +16,7 @@ DA4505 - orange
     margin: 0;
     box-sizing: border-box;
     background-color: #17161A;
-    font-family: 'Creepster', cursive;
+    font-family: 'Griffy', cursive;
     color: #F6F1EF;
 }
 
@@ -32,14 +32,53 @@ body {
 }
 
 .board-header button {
-    width: 100px;
-    height: 25px;
+    font-family: 'Griffy', cursive;
+    width: auto;
+    padding: 5px 8px;
+    height: auto;
     margin: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .game-info {
     display: inline-flex;
     margin-left: 100px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-family: 'Griffy', cursive;
+    width: 150px;
+    top: 120%;
+    left: 50%;
+    margin-left: -75px;
+    background-color: #9F8656;
+    color: #F6F1EF;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    border: #DA4505 1px solid;
+    box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
+    -webkit-box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
+    -moz-box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
+
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 .game {
@@ -68,10 +107,6 @@ body {
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
