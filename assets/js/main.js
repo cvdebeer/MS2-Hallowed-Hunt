@@ -2,7 +2,9 @@ const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
 const reset = document.querySelector('#game-reset');
+const moves = document.querySelector('.moves');
 
+let count = 0;
 let cardHasFlipped = false;
 let blockOverClick = false;
 let cardOne, cardTwo;
@@ -57,6 +59,11 @@ function stopClick() {
 
     resetGameBoard();
 }
+
+function resetGameBoard() {
+    [cardHasFlipped, blockOverClick] = [false, false];
+    [cardOne, cardTwo] = [null, null];
+}
 // this function allows the sound effects when clicking the cards
 function playAudio() {
     audio.play();
@@ -74,12 +81,7 @@ function audioButton() {
     }
 }
 
-function resetGameBoard() {
-    [cardHasFlipped, blockOverClick] = [false, false];
-    [cardOne, cardTwo] = [null, null];
-}
-
-//this function is to reset/restart the game board and unflip all the cards.
+//this function is to reset/restart the game board and unflip all the cards and turns move counter back to 0
 function shuffleCards() {
     cards.forEach(card => {
         card.classList.remove('flip');
@@ -89,11 +91,21 @@ function shuffleCards() {
         card.style.order = randomMix;
     });
     cards.forEach(card => card.addEventListener('click', flipCard));
+    count = 0;
+    moves.innerHTML = `MOVES: ${count}`;
 };
 
+//function to count the moves the player is making
+function countMoves() {
+    if (cardHasFlipped == true) {
+        count++;
+        moves.innerHTML = `MOVES: ${count}`;
+    }
+}
 
 
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
 cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card => card.addEventListener('click', countMoves));
 cards.forEach(card => card.addEventListener('click', playAudio));
