@@ -29,6 +29,11 @@ body {
     display: inline-flex;
     width: 100%;
     align-content: center;
+    margin-left: 25%;
+}
+
+.game-name {
+    font-family: 'Creepster', cursive;
 }
 
 .board-header button {
@@ -73,12 +78,35 @@ body {
     box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
     -webkit-box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
     -moz-box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
-
-
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+.box {
+    font-family: 'Creepster', cursive;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.moves {
+    margin-left: 120px;
+}
+
+.change-level {
+    margin-left: 100px;
+}
+
+.level {
+    margin-left: 20px;
+    font-size: 30px;
+    padding-top: 10px;
+
+}
+
+.timer {
+    margin-left: 100px;
 }
 
 .game {
