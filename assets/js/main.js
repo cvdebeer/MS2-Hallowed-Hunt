@@ -60,16 +60,17 @@ function stopClick() {
 // this function allows the sound effects when clicking the cards
 function playAudio() {
     audio.play();
+    sound.innerHTML == `<i class="fas fa-volume-up"> ON</i>`;
 }
 
 // switches sound effects on when you click the ON/OFF button
 function audioButton() {
-    if (sound.innerHTML == 'ON') {
+    if (sound.innerHTML == `<i class="fas fa-volume-up"> ON</i>`) {
         cards.forEach(card => card.removeEventListener('click', playAudio));
-        sound.innerHTML = "OFF";
+        sound.innerHTML = `<i class="fas fa-volume-up"> OFF</i>`;
     } else {
         cards.forEach(card => card.addEventListener('click', playAudio));
-        sound.innerHTML = "ON";
+        sound.innerHTML = `<i class="fas fa-volume-up"> ON</i>`;
     }
 }
 
