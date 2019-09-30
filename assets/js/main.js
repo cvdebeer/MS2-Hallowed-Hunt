@@ -5,6 +5,8 @@ const reset = document.querySelector('#game-reset');
 const moves = document.querySelector('.moves');
 const seconds = document.querySelector('.seconds');
 const minutes = document.querySelector('.minutes');
+const dropdown = document.querySelector('.change-level');
+const drops = document.querySelectorAll('.drop');
 easyDone = [];
 
 let count = 0;
@@ -116,9 +118,9 @@ function countMoves() {
         moves.innerHTML = `MOVES: ${count}`;
     }
 }
+
 // function to start the timer- copied from Stack Overflow
 function startTimer() {
-
     cards.forEach(card => card.removeEventListener('click', startTimer));
     clearInterval(interval);
 
@@ -129,16 +131,29 @@ function startTimer() {
         document.getElementById("seconds").innerHTML = ":" + pad(++sec % 60);
         document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
     }, 1000);
-
 }
+
 //function to stop the clock from running.
 function resetTimer() {
     clearInterval(interval);
 }
 
+function myFunction() {
+    document.getElementById("levelDropdown").classList.toggle("show");
+}
 
+function navFunc() {
+    // console.log('I see you');
+    // console.log(drops);
+    drops.forEach(drop => drop.classList.add('show'));
+}
 
+function navNot() {
+    drops.forEach(drop => drop.classList.remove('show'));
+}
 
+dropdown.addEventListener('mouseover', navFunc);
+dropdown.addEventListener('mouseout', navNot);
 
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
