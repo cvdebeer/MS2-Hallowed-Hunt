@@ -16,38 +16,88 @@ DA4505 - orange
     margin: 0;
     box-sizing: border-box;
     background-color: #17161A;
-    font-family: 'Griffy', cursive;
+    font-family: 'Creepster', cursive;
     color: #F6F1EF;
 }
 
 body {
     height: 100vh;
     align-content: center;
+    background-color: #17161A;
 }
 
 /* top section of the page-----------------------------------------------------------------*/
 .board-header {
     display: inline-flex;
     width: 100%;
-    align-content: center;
-    margin-left: 25%;
+    justify-content: center;
+    padding: 5px, 20px;
 }
 
 .game-name {
     font-family: 'Creepster', cursive;
+    width: 25%;
+    font-size: 60px;
 }
 
-.board-header button {
-    font-family: 'Griffy', cursive;
-    width: auto;
-    padding: 5px 8px;
-    height: auto;
-    margin: 25px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+.board-header img {
+    height: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.board-header h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+    margin: 20px 0px 0px 50px;
+}
+
+.btns {
+    padding: 8px 10px 0px;
+    border: 1px solid #F6F1EF;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tooltip>.tooltip-inner {
+    background-color: #9F8656;
+    font-size: 20px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    font-weight: 900;
+    color: #17161A;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    border: #F6F1EF 5px solid;
+    box-shadow: 17px 16px 26px -8px rgba(23, 22, 26, 1);
+    -webkit-box-shadow: 17px 16px 26px -8px rgba(23, 22, 26, 1);
+    -moz-box-shadow: 17px 16px 26px -8px rgba(23, 22, 26, 1);
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: #F6F1EF;
+}
+
+#sound {
+    display: flex;
+}
+
+#sound span {
+    margin-left: 10px;
 }
 
 .game-info {
@@ -55,48 +105,7 @@ body {
     margin-left: 100px;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    font-family: 'Griffy', cursive;
-    width: 200px;
-    top: 120%;
-    left: 50%;
-    margin-left: -100px;
-    background-color: #9F8656;
-    color: #F6F1EF;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    border: #DA4505 1px solid;
-    box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
-    -webkit-box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
-    -moz-box-shadow: 17px 16px 26px -8px rgba(168, 155, 138, 1);
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    transition: 0.25s;
-    -webkit-transition: 0.25s;
-    -moz-transition: 0.25s;
-    -ms-transition: 0.25s;
-    -o-transition: 0.25s;
-    font-size: 20px;
-}
-
 .box {
-    font-family: 'Creepster', cursive;
     font-size: 20px;
     letter-spacing: 1.5px;
 }
@@ -104,6 +113,7 @@ body {
 .moves {
     margin-left: 120px;
 }
+
 
 
 
@@ -184,12 +194,7 @@ body {
     -o-transition: 0.5s;
 }
 
-.level {
-    margin-left: 20px;
-    font-size: 30px;
-    padding-top: 10px;
 
-}
 
 .timer {
     margin-left: 100px;
