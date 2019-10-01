@@ -79,17 +79,17 @@ function resetGameBoard() {
 // this function allows the sound effects when clicking the cards
 function playAudio() {
     audio.play();
-    sound.innerHTML == `<i class="fas fa-volume-up"> ON</i>`;
+    sound.innerHTML = `<h5>ON</h5><span><i class="fas fa-volume-up"></i></span>`;
 }
 
 // switches sound effects on when you click the ON/OFF button
 function audioButton() {
-    if (sound.innerHTML == `<i class="fas fa-volume-up"> ON</i>`) {
+    if (sound.innerHTML == `<h5>ON</h5><span><i class="fas fa-volume-up"></i></span>`) {
         cards.forEach(card => card.removeEventListener('click', playAudio));
-        sound.innerHTML = `<i class="fas fa-volume-up"> OFF</i>`;
+        sound.innerHTML = `<h5>OFF</h5><span><i class="fas fa-volume-up"></i></span>`;
     } else {
         cards.forEach(card => card.addEventListener('click', playAudio));
-        sound.innerHTML = `<i class="fas fa-volume-up"> ON</i>`;
+        sound.innerHTML = `<h5>ON</h5><span><i class="fas fa-volume-up"></i></span>`;
     }
 }
 
@@ -152,11 +152,19 @@ function navNot() {
     drops.forEach(drop => drop.classList.remove('show'));
 }
 
+// function from stackoverflow to show tooltips only on hover.
+$('[data-toggle="tooltip"]').tooltip({
+    trigger: 'hover'
+})
+
+
 dropdown.addEventListener('mouseover', navFunc);
 dropdown.addEventListener('mouseout', navNot);
 
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
+
+
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', startTimer));
 cards.forEach(card => card.addEventListener('click', countMoves));
