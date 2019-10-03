@@ -1,4 +1,5 @@
 const gameIntro = document.querySelector('.game-intro');
+const easy = document.querySelector('#easy');
 const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
@@ -24,6 +25,11 @@ let cardOne, cardTwo;
 
 // game starter modal
 $(gameIntro).modal('show')
+
+//hide starter modal
+function hideModal() {
+    $(gameIntro).modal('hide')
+}
 // make the card flip
 function flipCard() {
 
@@ -180,6 +186,7 @@ function mdlDropDown() {
 dropdown.addEventListener('mouseover', navFunc);
 dropdown.addEventListener('mouseout', navNot);
 
+easy.addEventListener('click', hideModal);
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
 modalReset.addEventListener('click', shuffleCards);
