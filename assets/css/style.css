@@ -276,3 +276,63 @@ body {
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
 }
+
+/*-------------------------------------------------------------------------------------------Modal --------------*/
+.modal-dialog {
+    position: relative;
+    top: 40%;
+}
+
+.inner-view {
+    align-content: center;
+    background-color: #A89B8A;
+    background-image: url('/assets/img/bats.svg');
+    background-size: cover;
+    border: 3px solid #DA4505;
+    -webkit-box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
+    -moz-box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
+    box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
+}
+
+button.close span {
+    background-color: transparent;
+}
+
+.modal-header {
+    background-color: transparent;
+    border: none;
+}
+
+.successful-game {
+    background-color: transparent;
+}
+
+.modal-btns {
+    background-color: transparent;
+    display: flexbox;
+    border: none;
+}
+
+.btn-cntrl {
+    background-color: transparent;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.mod-btn {
+    background-color: #DA4505;
+    width: 200px;
+    padding: 5px 10px;
+    color: #17161A;
+    border: #17161A 2px solid;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
+    -moz-box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
+    box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
+    text-shadow: 1px 1px#9F8656;
+}
