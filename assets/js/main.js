@@ -7,6 +7,10 @@ const seconds = document.querySelector('.seconds');
 const minutes = document.querySelector('.minutes');
 const dropdown = document.querySelector('.change-level');
 const drops = document.querySelectorAll('.drop');
+const gameSuccess = document.querySelector('.successful-game')
+const modalReset = document.querySelector('#mdl-rst');
+const modalCL = document.querySelector('#mdl-chg-lvl');
+const exit = document.querySelector('#mdl-exit');
 easyDone = [];
 
 let count = 0;
@@ -66,6 +70,7 @@ function stopClick() {
     easyDone.push(cardOne);
     easyDone.push(cardTwo);
     if (easyDone.length === 12) {
+        launchModal();
         resetTimer();
     }
 
@@ -109,6 +114,7 @@ function shuffleCards() {
     moves.innerHTML = `MOVES: ${count}`;
     sec = 0;
     easyDone = [];
+    $(gameSuccess).modal('hide');
 };
 
 //function to count the moves the player is making
@@ -157,13 +163,25 @@ $('[data-toggle="tooltip"]').tooltip({
     trigger: 'hover'
 })
 
+//function to launch the modal at the end of the game
+function launchModal() {
+    //console.log('I can see you');
+    $(gameSuccess).modal('show')
+}
+
+function exitGame() {
+    close();
+}
+
 
 dropdown.addEventListener('mouseover', navFunc);
 dropdown.addEventListener('mouseout', navNot);
 
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
-
+modalReset.addEventListener('click', shuffleCards);
+//modalCL.addEventListener('click', )
+exit.addEventListener('click', exitGame);
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', startTimer));
