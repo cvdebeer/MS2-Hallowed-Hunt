@@ -1,3 +1,4 @@
+const gameIntro = document.querySelector('.game-intro');
 const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
@@ -21,7 +22,8 @@ let cardHasFlipped = false;
 let blockOverClick = false;
 let cardOne, cardTwo;
 
-
+// game starter modal
+$(gameIntro).modal('show')
 // make the card flip
 function flipCard() {
 
@@ -71,7 +73,7 @@ function stopClick() {
     easyDone.push(cardOne);
     easyDone.push(cardTwo);
     if (easyDone.length === 12) {
-        launchModal();
+        successModal();
         resetTimer();
     }
 
@@ -162,7 +164,7 @@ $('[data-toggle="tooltip"]').tooltip({
 })
 
 //function to launch the modal at the end of the game
-function launchModal() {
+function successModal() {
     //console.log('I can see you');
     $(gameSuccess).modal('show')
 }

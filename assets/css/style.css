@@ -277,7 +277,7 @@ body {
     -o-transform: rotateY(180deg);
 }
 
-/*-------------------------------------------------------------------------------------------Modal --------------*/
+/*-------------------------------------------------------------------------------------------Modal Success--------------*/
 .modal-dialog {
     position: relative;
     top: 40%;
@@ -294,18 +294,16 @@ body {
     box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
 }
 
+.successful-game,
 button.close span {
     background-color: transparent;
 }
 
-.modal-header {
+.scs-hdr {
     background-color: transparent;
     border: none;
 }
 
-.successful-game {
-    background-color: transparent;
-}
 
 .modal-btns {
     background-color: transparent;
@@ -335,4 +333,58 @@ button.close span {
     -moz-box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
     box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
     text-shadow: 1px 1px#9F8656;
+}
+
+/* ----------------------------------------------------------------------------------Modal Intro--------*/
+
+.mdl-intr-hdr {
+    border: none;
+    background-color: transparent;
+}
+
+.outer-welcome {
+    position: relative;
+    top: 10%;
+}
+
+.inner-welcome {
+    border: 5px solid #DA4505;
+    background-color: #17161A;
+    background-image: url('/assets/img/front_page.svg');
+    background-size: fill;
+    height: 700px;
+}
+
+.game-nav {
+    display: flexbox;
+    background-color: transparent;
+}
+
+.nav-ctrl {
+    background-color: transparent;
+    text-align: center;
+    margin: 20px;
+}
+
+.open-btn {
+    background-color: #DA4505;
+    width: 200px;
+    padding: 5px 10px;
+    color: #17161A;
+    border: #17161A 2px solid;
+    text-shadow: 2px 2px#9F8656;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-box-shadow: 9px 6px 14px 0px rgba(159, 134, 86, 1);
+    -moz-box-shadow: 9px 6px 14px 0px rgba(159, 134, 86, 1);
+    box-shadow: 9px 6px 14px 0px rgba(159, 134, 86, 1);
+}
+
+.nav-ctrl a {
+    color: #17161A;
+    font-size: 40px;
+    text-decoration: none;
 }
