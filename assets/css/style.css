@@ -304,7 +304,6 @@ button.close span {
     border: none;
 }
 
-
 .modal-btns {
     background-color: transparent;
     display: flexbox;
@@ -388,4 +387,43 @@ button.close span {
     color: #17161A;
     font-size: 40px;
     text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------------Easter Egg/Konami Code-------*/
+.easteregg {
+    box-sizing: border-box;
+    position: absolute;
+    top: 5%;
+    left: 33.3%;
+    height: 600px;
+    width: 800px;
+    background-color: aqua;
+    z-index: 5;
+    visibility: hidden;
+    text-align: center;
+
+}
+
+.easteregg p {
+    background-color: aqua;
+    font-size: 75px;
+}
+
+#dance {
+    margin: 25px 0px 0px 25px;
+}
+
+.easteregg.show {
+    visibility: visible;
+}
+
+.easter-close {
+    background-color: #17161A;
+    padding: 5px;
+    border: 2px #DA4505 solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
