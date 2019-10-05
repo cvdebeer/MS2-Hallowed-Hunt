@@ -288,7 +288,7 @@ copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watc
 .inner-view {
     align-content: center;
     background-color: #A89B8A;
-    background-image: url('/assets/img/bats.svg');
+    background-image: url('https://res.cloudinary.com/dgsqmdssi/image/upload/v1570288912/Hallowed-Hunt/bats_kw2cig.svg');
     background-size: cover;
     border: 3px solid #DA4505;
     -webkit-box-shadow: 10px 10px 14px 0px rgba(23, 22, 26, 1);
@@ -351,7 +351,7 @@ button.close span {
 .inner-welcome {
     border: 5px solid #DA4505;
     background-color: #17161A;
-    background-image: url('/assets/img/front_page.svg');
+    background-image: url('https://res.cloudinary.com/dgsqmdssi/image/upload/v1570288912/Hallowed-Hunt/front_page_zyu3tn.svg');
     background-size: fill;
     height: 700px;
 }
