@@ -20,8 +20,7 @@
 <body>
     <!--------------------------------------------------------------------------------------------Game Start Modal----------
      basic modal copied and adjusted from bootstrap-->
-    <div class="modal game-intro" id="game-start" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
+    <div class="modal game-intro" id="game-start" tabindex="-1" role="dialog">
         <div class="modal-dialog outer-welcome" role="document">
             <div class="modal-content inner-welcome">
                 <div class="modal-header mdl-intr-hdr">
@@ -37,14 +36,14 @@
                         </button>
                     </div>
                     <div class="nav-ctrl">
-                        <button class="open-btn">
-                            <a href="medium.html">MEDIUM</a>
-                        </button>
+                        <div class="btn-box">
+                            <a class="open-btn" type="button" href="medium.html">MEDIUM</a>
+                        </div>
                     </div>
                     <div class="nav-ctrl">
-                        <button class="open-btn">
-                            <a href="hard.html">HARD</a>
-                        </button>
+                        <div class="btn-box">
+                            <a class="open-btn" type="button" href="hard.html">HARD</a>
+                        </div>
                     </div>
                 </div>
             </div><!-- /.modal-content -->
@@ -77,21 +76,22 @@
     </div>
     <div class="container info-buttons">
         <div class="row">
-            <div class="col-md-4 offset-md-3"><button type="button" id='game-play' class="btns game-play"
-                    data-toggle="tooltip" data-placement="bottom" title="Match pairs of cards up in the shortest amount of moves and time.
+            <div class="col-md-4 offset-md-3">
+                <button type="button" id='game-play' class="btns game-play" data-toggle="tooltip"
+                    data-placement="bottom" title="Match pairs of cards up in the shortest amount of moves and time.
                 Good luck and have fun!">
-                    <h5>HOW TO PLAY</h5>
+                    HOW TO PLAY
                 </button>
             </div>
             <div id="game-reset">
                 <div class="col-md-2"><button type="button" class="btns" data-toggle="tooltip" data-placement="bottom"
                         title="Click to reset this game">
-                        <h5>RESET</h5>
+                        RESET
                     </button>
                 </div>
             </div>
             <div class="col-md-2"><button id="sound" class="btns">
-                    <h5>ON</h5><span><i class="fas fa-volume-up"></i></span>
+                    ON<span><i class="fas fa-volume-up"></i></span>
                 </button>
             </div>
         </div>
@@ -99,19 +99,19 @@
 
     <!------------------------------------------------------------------------------------------------Game Info Changing-->
     <div class="container game-info">
-        <div class="row">
+        <div class="row" id="row-change">
             <div class='col-md-2 offset-md-3 box moves'>
-                <h5>MOVES: 0</h5>
+                MOVES: 0
             </div>
             <div class="col-md-3 box change-level">
-                <h5>CHANGE LEVEL</h5>
+                CHANGE LEVEL
                 <div id="levelDropdown" class="dropdown-content">
                     <a class='drop' href="medium.html">Medium</a>
                     <a class='drop' href="hard.html">Hard</a>
                 </div>
             </div>
             <div class="col-md-2  box timer">
-                <h5>TIMER:</h5>
+                TIMER:
                 <span id='minutes'>00:</span>
                 <span id="seconds">00</span>
             </div>
@@ -194,8 +194,7 @@
         </div>
     </section>
 
-    <!-------------------------------------------------------------This Modal is for successful completion of the game 
-     basic modal copied and adjusted from Boostrap-->
+    <!-----------This Modal is for successful completion of the game basic modal copied and adjusted from Boostrap-->
     <div class="modal successful-game" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content inner-view">
@@ -219,23 +218,24 @@
                     <div class="btn-cntrl">
                         <button id='mdl-exit' class="mod-btn">EXIT GAME</button>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-        <!---------------------------------------------------------------------------End of Completion Modal------------------->
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!---------------------------------------------------------------------------End of Completion Modal------------------->
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
-        <script src="assets/js/easteregg.js" type="text/javascript"></script>
-        <script src='assets/js/main.js' type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/easteregg.js" type="text/javascript"></script>
+    <script src='assets/js/main.js' type="text/javascript"></script>
 
 
 </body>
