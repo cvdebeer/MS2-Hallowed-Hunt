@@ -28,9 +28,10 @@ $(gameIntro).modal('show')
 
 //hide starter modal
 function hideModal() {
-    $(gameIntro).modal('hide')
+    $(gameIntro).modal('hide');
 }
-// make the card flip
+//shuffleCards(); //-----------------------------------------------open function when game is ready.
+// make the card flip- function used  from Code Sketch
 function flipCard() {
 
     // block from clicking too many card
@@ -54,12 +55,12 @@ function flipCard() {
     matchChecking();
 }
 
-// this function will check if card one matched card Two
+// this function will check if card one matched card Two-  function used  from Code Sketch
 function matchChecking() {
     let match = cardOne.dataset.check === cardTwo.dataset.check
     match ? stopClick() : unFlip();
 }
-//  this function allows some time for the second card to flip over if it is incorrect
+//  this function allows some time for the second card to flip over if it is incorrect - function used  from Code Sketch
 function unFlip() {
     blockOverClick = true;
 
@@ -72,7 +73,7 @@ function unFlip() {
     }, 1500);
 }
 
-// this function stops the user from clicking the matched card.
+// this function stops the user from clicking the matched card.-- function used and adjusted from Code Sketch
 function stopClick() {
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
@@ -86,6 +87,7 @@ function stopClick() {
     resetGameBoard();
 }
 
+//- function used  from Code Sketch to lock the board
 function resetGameBoard() {
     [cardHasFlipped, blockOverClick] = [false, false];
     [cardOne, cardTwo] = [null, null];
@@ -93,21 +95,22 @@ function resetGameBoard() {
 // this function allows the sound effects when clicking the cards
 function playAudio() {
     audio.play();
-    sound.innerHTML = `<h5>ON</h5><span><i class="fas fa-volume-up"></i></span>`;
+    sound.innerHTML = `ON<span><i class="fas fa-volume-up"></i></span>`;
 }
 
 // switches sound effects on when you click the ON/OFF button
 function audioButton() {
-    if (sound.innerHTML == `<h5>ON</h5><span><i class="fas fa-volume-up"></i></span>`) {
+    if (sound.innerHTML == `ON<span><i class="fas fa-volume-up"></i></span>`) {
         cards.forEach(card => card.removeEventListener('click', playAudio));
-        sound.innerHTML = `<h5>OFF</h5><span><i class="fas fa-volume-up"></i></span>`;
+        sound.innerHTML = `OFF<span><i class="fas fa-volume-up"></i></span>`;
     } else {
         cards.forEach(card => card.addEventListener('click', playAudio));
-        sound.innerHTML = `<h5>ON</h5><span><i class="fas fa-volume-up"></i></span>`;
+        sound.innerHTML = `ON<span><i class="fas fa-volume-up"></i></span>`;
     }
 }
 
 //this function is to reset/restart the game board and unflip all the cards and turns move counter back to 0
+//- function used  from Code Sketch and adjusted to add extra elements needed for the rest of my code
 function shuffleCards() {
     cards.forEach(card => {
         card.classList.remove('flip');
@@ -122,7 +125,6 @@ function shuffleCards() {
     count = 0;
     moves.innerHTML = `MOVES: ${count}`;
     sec = 0;
-
     easyDone = [];
     $(gameSuccess).modal('hide');
 };
@@ -135,7 +137,7 @@ function countMoves() {
     }
 }
 
-// function to start the timer- copied from Stack Overflow
+// function to start the timer- copied and adjusted from Stack Overflow (https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript)
 function startTimer() {
     cards.forEach(card => card.removeEventListener('click', startTimer));
     clearInterval(interval);
@@ -164,7 +166,7 @@ function navNot() {
     drops.forEach(drop => drop.classList.remove('show'));
 }
 
-// function from stackoverflow to show tooltips only on hover.
+// function from stackoverflow to show tooltips only on hover.(https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript)
 $('[data-toggle="tooltip"]').tooltip({
     trigger: 'hover'
 })
