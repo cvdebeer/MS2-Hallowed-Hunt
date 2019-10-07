@@ -1,5 +1,4 @@
 const gameIntro = document.querySelector('.game-intro');
-//const easy = document.querySelector('#easy');
 const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
@@ -192,15 +191,13 @@ function mdlDropDownExit() {
 dropdown.addEventListener('mouseover', navFunc);
 dropdown.addEventListener('mouseout', navNot);
 modalCL.addEventListener('mouseover', mdlDropDown);
-modalCL.addEventListener('mouseout', mdlDropDown);
 
 
-// easy.addEventListener('click', hideModal);
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
 modalReset.addEventListener('click', shuffleCards);
-
 exit.addEventListener('click', exitGame);
+modalCL.addEventListener('click', mdlDropDownExit);
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', startTimer));

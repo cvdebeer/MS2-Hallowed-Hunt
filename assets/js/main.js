@@ -1,5 +1,4 @@
 const gameIntro = document.querySelector('.game-intro');
-const easy = document.querySelector('#easy');
 const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
@@ -26,10 +25,7 @@ let cardOne, cardTwo;
 // game starter modal
 $(gameIntro).modal('show')
 
-//hide starter modal
-function hideModal() {
-    $(gameIntro).modal('hide');
-}
+
 //shuffleCards(); //-----------------------------------------------open function when game is ready.
 // make the card flip- function used  from Code Sketch
 function flipCard() {
@@ -178,22 +174,28 @@ function successModal() {
 }
 
 function exitGame() {
-    close();
+    $(gameSuccess).modal('hide');
 }
 
 function mdlDropDown() {
     mdlDrops.forEach(drop => drop.classList.add('show'));
 }
 
+function mdlDropDownExit() {
+    mdlDrops.forEach(drop => drop.classList.remove('show'));
+}
+
+
 dropdown.addEventListener('mouseover', navFunc);
 dropdown.addEventListener('mouseout', navNot);
+modalCL.addEventListener('mouseover', mdlDropDown);
 
-easy.addEventListener('click', hideModal);
+
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
 modalReset.addEventListener('click', shuffleCards);
-modalCL.addEventListener('click', mdlDropDown);
 exit.addEventListener('click', exitGame);
+modalCL.addEventListener('click', mdlDropDownExit);
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', startTimer));
