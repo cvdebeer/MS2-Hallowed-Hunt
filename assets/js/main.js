@@ -66,7 +66,7 @@ function unFlip() {
         //console.log('unmatched');
 
         resetGameBoard()
-    }, 1500);
+    }, 1200);
 }
 
 // this function stops the user from clicking the matched card.-- function used and adjusted from Code Sketch

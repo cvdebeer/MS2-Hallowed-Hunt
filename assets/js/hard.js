@@ -1,5 +1,4 @@
 const gameIntro = document.querySelector('.game-intro');
-//const easy = document.querySelector('#easy');
 const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
 const sound = document.querySelector('#sound')
@@ -30,7 +29,9 @@ $(gameIntro).modal('show')
 function hideModal() {
     $(gameIntro).modal('hide');
 }
+
 //shuffleCards(); //-----------------------------------------------open function when game is ready.
+
 // make the card flip- function used  from Code Sketch
 function flipCard() {
 
@@ -68,9 +69,8 @@ function unFlip() {
         cardOne.classList.remove('flip');
         cardTwo.classList.remove('flip');
         //console.log('unmatched');
-
         resetGameBoard()
-    }, 1500);
+    }, 1200);
 }
 
 // this function stops the user from clicking the matched card.-- function used and adjusted from Code Sketch
