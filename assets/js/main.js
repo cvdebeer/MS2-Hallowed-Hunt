@@ -1,15 +1,13 @@
 const gameIntro = document.querySelector('.game-intro');
 const cards = document.querySelectorAll('.game-card');
 const audio = new Audio('assets/card-flip.wav');
-const sound = document.querySelector('#sound')
+const sound = document.querySelector('#sound');
 const reset = document.querySelector('#game-reset');
 const moves = document.querySelector('.moves');
-const seconds = document.querySelector('.seconds');
-const minutes = document.querySelector('.minutes');
 const dropdown = document.querySelector('.change-level');
 const drops = document.querySelectorAll('.drop');
 const mdlDrops = document.querySelectorAll('.mdl-drop');
-const gameSuccess = document.querySelector('.successful-game')
+const gameSuccess = document.querySelector('.successful-game');
 const modalReset = document.querySelector('#mdl-rst');
 const modalCL = document.querySelector('#mdl-chg-lvl');
 const exit = document.querySelector('#mdl-exit');
@@ -23,7 +21,7 @@ let blockOverClick = false;
 let cardOne, cardTwo;
 
 // game starter modal
-$(gameIntro).modal('show')
+$(gameIntro).modal('show');
 
 
 //shuffleCards(); //-----------------------------------------------open function when game is ready.
@@ -53,7 +51,7 @@ function flipCard() {
 
 // this function will check if card one matched card Two-  function used  from Code Sketch
 function matchChecking() {
-    let match = cardOne.dataset.check === cardTwo.dataset.check
+    let match = cardOne.dataset.check === cardTwo.dataset.check;
     match ? stopClick() : unFlip();
 }
 //  this function allows some time for the second card to flip over if it is incorrect - function used  from Code Sketch
@@ -65,7 +63,7 @@ function unFlip() {
         cardTwo.classList.remove('flip');
         //console.log('unmatched');
 
-        resetGameBoard()
+        resetGameBoard();
     }, 1200);
 }
 
@@ -123,7 +121,7 @@ function shuffleCards() {
     sec = 0;
     easyDone = [];
     $(gameSuccess).modal('hide');
-};
+}
 
 //function to count the moves the player is making
 function countMoves() {
@@ -165,12 +163,12 @@ function navNot() {
 // function from stackoverflow to show tooltips only on hover.(https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript)
 $('[data-toggle="tooltip"]').tooltip({
     trigger: 'hover'
-})
+});
 
 //function to launch the modal at the end of the game
 function successModal() {
     //console.log('I can see you');
-    $(gameSuccess).modal('show')
+    $(gameSuccess).modal('show');
 }
 
 function exitGame() {
