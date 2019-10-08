@@ -11,6 +11,7 @@ const gameSuccess = document.querySelector('.successful-game');
 const modalReset = document.querySelector('#mdl-rst');
 const modalCL = document.querySelector('#mdl-chg-lvl');
 const exit = document.querySelector('#mdl-exit');
+const easteregg = document.querySelector('#halloween');
 
 let easyDone = [];
 let count = 0;
@@ -22,7 +23,8 @@ let cardOne, cardTwo;
 
 // game starter modal
 $(gameIntro).modal('show');
-
+// showEasterEgg start function
+$(window).on('load', showEasterEgg);
 
 shuffleCards();
 
@@ -121,6 +123,7 @@ function shuffleCards() {
     sec = 0;
     easyDone = [];
     $(gameSuccess).modal('hide');
+    showEasterEgg();
 }
 
 //function to count the moves the player is making
@@ -179,6 +182,17 @@ function mdlDropDown() {
 function mdlDropDownExit() {
     mdlDrops.forEach(drop => drop.classList.remove('show'));
 }
+
+//this function shows the user the clue to the Konami code
+function showEasterEgg() {
+
+    easteregg.classList.add('show');
+
+    setTimeout(function () {
+        easteregg.classList.remove('show');
+    }, 10000)
+}
+
 
 
 dropdown.addEventListener('mouseover', navFunc);

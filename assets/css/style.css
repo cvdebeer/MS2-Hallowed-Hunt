@@ -53,6 +53,22 @@ body {
     margin: 20px 0px 0px 50px;
 }
 
+/* Show Konami clue */
+#halloween {
+    color: #A89B8A;
+    font-size: 10px;
+    font-family: 'Griffy', cursive;
+    visibility: hidden;
+}
+
+#halloween.show {
+    visibility: visible;
+}
+
+#egg {
+    width: 10px;
+}
+
 /*-----------------------------------------------------------------------------------------buttons */
 .btns {
     letter-spacing: 1.5px;
