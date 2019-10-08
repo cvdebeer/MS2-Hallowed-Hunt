@@ -11,11 +11,11 @@ const gameSuccess = document.querySelector('.successful-game');
 const modalReset = document.querySelector('#mdl-rst');
 const modalCL = document.querySelector('#mdl-chg-lvl');
 const exit = document.querySelector('#mdl-exit');
-easyDone = [];
 
+let easyDone = [];
 let count = 0;
-let sec = 0,
-    interval;
+let sec = 0;
+let interval = 0;
 let cardHasFlipped = false;
 let blockOverClick = false;
 let cardOne, cardTwo;
@@ -28,12 +28,11 @@ $(gameIntro).modal('show');
 // make the card flip- function used  from Code Sketch
 function flipCard() {
 
-    // block from clicking too many card
-    if (blockOverClick) return;
-    // block from clicking the same card twice
-    if (this === cardOne) return;
+    if (blockOverClick) return; // block from clicking too many card
+    if (this === cardOne) return; // block from clicking the same card twice
 
     this.classList.toggle('flip');
+
     //Picking two cards to match
     if (!cardHasFlipped) {
         //1st card
