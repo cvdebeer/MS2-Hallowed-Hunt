@@ -24,7 +24,8 @@ let cardOne, cardTwo;
 $(gameIntro).modal('show');
 
 
-//shuffleCards(); //-----------------------------------------------open function when game is ready.
+shuffleCards();
+
 // make the card flip- function used  from Code Sketch
 function flipCard() {
 
@@ -39,12 +40,12 @@ function flipCard() {
         cardHasFlipped = true;
         cardOne = this;
         return;
-        // console.log({cardHasFlipped, cardOne});
+
     }
     //2nd card
     cardHasFlipped = false;
     cardTwo = this;
-    // console.log({cardOne,cardTwo });
+
     matchChecking();
 }
 
@@ -60,7 +61,7 @@ function unFlip() {
     setTimeout(() => {
         cardOne.classList.remove('flip');
         cardTwo.classList.remove('flip');
-        //console.log('unmatched');
+
 
         resetGameBoard();
     }, 1200);
@@ -150,8 +151,6 @@ function resetTimer() {
 }
 
 function navFunc() {
-    // console.log('I see you');
-    // console.log(drops);
     drops.forEach(drop => drop.classList.add('show'));
 }
 
@@ -166,7 +165,6 @@ $('[data-toggle="tooltip"]').tooltip({
 
 //function to launch the modal at the end of the game
 function successModal() {
-    //console.log('I can see you');
     $(gameSuccess).modal('show');
 }
 

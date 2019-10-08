@@ -11,11 +11,11 @@ const gameSuccess = document.querySelector('.successful-game');
 const modalReset = document.querySelector('#mdl-rst');
 const modalCL = document.querySelector('#mdl-chg-lvl');
 const exit = document.querySelector('#mdl-exit');
-hardDone = [];
 
+let hardDone = [];
 let count = 0;
-let sec = 0,
-    interval;
+let sec = 0;
+let interval = 0;
 let cardHasFlipped = false;
 let blockOverClick = false;
 let cardOne, cardTwo;
@@ -23,7 +23,7 @@ let cardOne, cardTwo;
 // game starter modal
 $(gameIntro).modal('show');
 
-//shuffleCards(); //-----------------------------------------------open function when game is ready.
+shuffleCards();
 
 // make the card flip- function used  from Code Sketch
 function flipCard() {
@@ -40,12 +40,11 @@ function flipCard() {
         cardHasFlipped = true;
         cardOne = this;
         return;
-        // console.log({cardHasFlipped, cardOne});
     }
     //2nd card
     cardHasFlipped = false;
     cardTwo = this;
-    // console.log({cardOne,cardTwo });
+
     matchChecking();
 }
 
@@ -61,7 +60,7 @@ function unFlip() {
     setTimeout(() => {
         cardOne.classList.remove('flip');
         cardTwo.classList.remove('flip');
-        //console.log('unmatched');
+
         resetGameBoard();
     }, 1200);
 }
@@ -150,8 +149,6 @@ function resetTimer() {
 }
 
 function navFunc() {
-    // console.log('I see you');
-    // console.log(drops);
     drops.forEach(drop => drop.classList.add('show'));
 }
 
@@ -166,7 +163,6 @@ $('[data-toggle="tooltip"]').tooltip({
 
 //function to launch the modal at the end of the game
 function successModal() {
-    //console.log('I can see you');
     $(gameSuccess).modal('show');
 }
 
