@@ -56,7 +56,7 @@ body {
 /* Show Konami clue */
 #halloween {
     color: #A89B8A;
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Griffy', cursive;
     visibility: hidden;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 #egg {
-    width: 10px;
+    width: 12px;
 }
 
 /*-----------------------------------------------------------------------------------------buttons */
