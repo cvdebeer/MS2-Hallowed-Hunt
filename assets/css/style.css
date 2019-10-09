@@ -236,6 +236,7 @@ copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watc
     height: calc(33% - 10px);
     margin: 5px;
     position: relative;
+    background-color: transparent;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
