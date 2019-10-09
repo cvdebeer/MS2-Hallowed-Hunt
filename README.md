@@ -223,7 +223,7 @@ Manual testing on each part of the game was done while building it. When a featu
 
 ##### Browser Testing
 
-I tested the following browsers already installed on my computer:
+I tested the following browsers already installed on my computer (all browsers tested were latest versions of these browsers):
 
 - Chrome- worked with full funtionality and all features working as expected.
 - Edge -  Game pages and boards worked as looked as expected. The index page buttons were not styled as expected but still functioned. It was also noted that the Konami code did not work on this browser.
@@ -231,7 +231,7 @@ I tested the following browsers already installed on my computer:
 - Internet Explorer - none of the functionality or features were working.
 - Opera - Game pages and boards worked as looked as expected. The index page buttons were not styled as expected but still functioned.
 
-I tested the game on my Ipad in Safari - the index page looked and worked as expected, but the game board did not. When the cards "flipped" over the face cards were not visible. This is a bug that will need to be sorted out in the near future so that it will be playable by Mac Users.
+I tested the game on my Ipad in Safari - the index page looked and worked as expected, but the game board did not. When the cards "flipped" over the face cards were not visible. I eventually found the solution on Stackoverflow and made the background colour transparent. This made the face-card visible, so I assume that it is working on all Safari browsers too.
 
 ##### User Facing
 
@@ -324,6 +324,7 @@ I did attempt to start my project using Test Driven Development by writing tests
 - There was a bug on the hard level that caused the cards to stay flipped even when they weren't matched. This was resolved when I moved all my code into one JS file.
 - When navigating to the easy level, the start modal kept popping up. This was resolved by seperating the html and making the modal the index page.
 - When moving the mouse after hovering over the dropdown list, the list would not go away if nothing was selected. This was resolved with a click function allowing the User to close the dropdown list again.
+- There was a bug on playing the game on my Ipad. When the card flipped I only got a black card and didn't see that face-card. This was solved by making the background colour transparent.
 
 ## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) Deployment
 
