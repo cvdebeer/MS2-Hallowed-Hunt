@@ -1,4 +1,4 @@
-# ![Pumpkin](assets/img/pumpkin_orange.svg) MS2-Hallowed Hunt ![Pumpkin](assets/img/pumpkin_orange.svg)
+# ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) MS2-Hallowed Hunt ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg)
 
 ---
 
@@ -30,6 +30,7 @@ Welcome to a Halloween themed memory card game, available to play in three level
 
    - [Manual Testing](#manual-testing)
    - [Automated Testing](#automated-testing)
+   - [Bugs](#bugs)
 
 5. ### Deployment
 
@@ -40,20 +41,20 @@ Welcome to a Halloween themed memory card game, available to play in three level
    - [Code](#code)
    - [Acknowledgements](#acknowledgements)
   
-## ![Pumpkin](assets/img/pumpkin_orange.svg) UX
+## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) UX
 
 ---
 
 ### Project Goals
 
 The main goal of this game is to provide a fun and challenging memory game for young and old alike to enjoy.  
-It is designed to test the user’s memory and ability to match up pairs as quickly and efficiently as possible. The replay value is endless as the cards will reshuffle into a new arrangement at the end of every game.
+It is designed to test the User’s memory and ability to match up pairs as quickly and efficiently as possible. The replay value is endless as the cards will reshuffle into a new arrangement at the end of every game.
 
-This website has been designed mainly with the desktop user in mind, although the easy level should be playable on a tablet. The amount of cards in the ‘Medium’ and ‘Hard’ level may not carry well onto devices smaller than a tablet.
+This website has been designed mainly with the desktop User in mind, although the easy level should be playable on a tablet. The amount of cards in the ‘Medium’ and ‘Hard’ level may not carry well onto devices smaller than a tablet.
 
 ### Player goals
 
-The target audience is users over the age of seven with different difficulty levels available to experience.
+The target audience is Users over the age of seven with different difficulty levels available to experience.
 
 Players goals are:
 
@@ -66,7 +67,7 @@ Players goals are:
 ### Developer Goals
 
 - To develop a game that all players across a wide range of ages will enjoy and stay engaged in for a happy amount of time.
-- To learn how to use Javascript to make user interaction with an application more dynamic.
+- To learn how to use Javascript to make User interaction with an application more dynamic.
 - To better understand the way that HTML, CSS and Javascript work together to achieve envisioned results.
 - To add a bit of hidden fun to the game by placing an Easter Egg (secret-code: "halloween")
 
@@ -92,7 +93,7 @@ Other colours used were selected as compatible with the help of [colormind](http
 
 #### Fonts
 
-The fonts selected initially for the game were **Creepster, Griffy** and **Henny Penny** as they are popular Halloween fonts. On the final deployment I selected to only use the Creepster font as it was the closest I felt to my theme and also the most legible to read for the User.
+The fonts selected initially for the game were **Creepster, Griffy** and **Henny Penny** as they are popular Halloween fonts. On the final deployment I selected to only use the Creepster font as it was the closest I felt to my theme and also the most legible to read for the User. The Griffy font was used as a one off with the Konami clue that appears every time you start a new game.
 
 #### Styling
 
@@ -102,11 +103,11 @@ The cards and buttons were all styled with rounded corners as that is what you w
 
 Images for the cards and backgrounds were all in keeping with the Halloween theme.
 
-Each level introduces new backgrounds and face cards, aimed at increasing visual pleasure around each level and helping the user to identify with the level they are on.
+Each level introduces new backgrounds and face cards, aimed at increasing visual pleasure around each level and helping the User to identify with the level they are on.
 
 #### Audio files
 
-To provide the feeling of sitting at a table with an actual deck of cards, a card flipping audio file has been used. This can be easily switched on and off by the user.
+To provide the feeling of sitting at a table with an actual deck of cards, a card flipping audio file has been used. This can be easily switched on and off by the User.
 
 #### Wireframes
 
@@ -114,7 +115,9 @@ My wireframes were created using [Balsamiq](https://balsamiq.com/) during the Sc
 
 [Click here to go to the Halloween Mockup](https://res.cloudinary.com/dgsqmdssi/image/upload/c_thumb,w_200,g_face/v1570185503/Hallowed-Hunt/Halloween_nlegnv.pdf)
 
-## ![Pumpkin](assets/img/pumpkin_orange.svg) Features
+Although the game was originally designed to have levels of 12, 24 and 36 cards, this was later changed as it would have made the cards on the game boards too small. This may have impacted User enjoyment and the final cards selected were 12,18 and 24.
+
+## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) Features
 
 ---
 
@@ -122,35 +125,35 @@ My wireframes were created using [Balsamiq](https://balsamiq.com/) during the Sc
 
 #### Opening Modal
 
-- At the beginning of the game a modal appears allowing the user to choose their difficulty level to their believed capabilities.
+- At the beginning of the game a modal appears allowing the User to choose their difficulty level to their believed capabilities.
 - Users are able to change the level of difficulty at any stage in the game by selecting the “Change Level” button.
 - This modal only appears when you first navigate to the page.
 
 #### Level Indicator
 
-The top right side of the page shows the user which level they are playing.
+The top right side of the page shows the User which level they are playing.
 
 #### "How to play" button
 
-- The user can hover over the button or click with their mouse and the basic instructions for playing the game will come into view.
+- The User can hover over the button or click with their mouse and the basic instructions for playing the game will come into view.
 - Once the User's mouse leaves the button area the instructions will disappear again.
 
 #### “Reset" button
 
-- If the user hovers over this button it will open a tooltip letting the user know what will happen if they click the button.
-- This button allows users to reset the game at any point and start over with a new shuffle.
+- If the User hovers over this button it will open a tooltip letting the User know what will happen if they click the button.
+- This button allows Users to reset the game at any point and start over with a new shuffle.
 - The button will also reset the counter and stop the clock.
 
 #### “Moves” counter
 
-- This starts when the user turns this first card and allows the user to keep track of how many moves it takes them to complete the game.
+- This starts when the User turns this first card and allows the User to keep track of how many moves it takes them to complete the game.
 - Counts are based on every two cards turned over.
-- If the user resets the game the counter will revert to zero.
+- If the User resets the game the counter will revert to zero.
 
 #### “Time” counter
 
-- The clock starts when the user turns the first card and will allow the user to keep track of how long it takes them to complete a game.
-- If the user resets the game the counter will stop. It will start again from zero when the user turns the first card of the new game again.
+- The clock starts when the User turns the first card and will allow the User to keep track of how long it takes them to complete a game.
+- If the User resets the game the counter will stop. It will start again from zero when the User turns the first card of the new game again.
 
 #### Game Board
 
@@ -162,32 +165,36 @@ The top right side of the page shows the user which level they are playing.
       - 6 rows of 6 for the hard level.
 
 - Each level has a different background pictures.
-- Images on the background pictures are grey and face cards are black to help the user differentiate between turned and unturned cards.
+- Images on the background pictures are grey and face cards are black to help the User differentiate between turned and unturned cards.
 
 #### Success Modal
 
-Once the game has been complete the user will be presented with the options:
+Once the game has been complete the User will be presented with the options:
 
 - "Play again" ie. Playing another game at the same level.
-- "Change level" ie. allowing the user to choose a different level.
-- "Exit Game" allowing the user to close the game.
+- "Change level" ie. allowing the User to choose a different level.
+- "Exit Game" allowing the User to close the game.
   
 #### Easter Egg (Konami code)
 
-- There is a hidden Easter Egg(Konami code) in the game. This will appear if the user types in the word "halloween" any time while playing the game.
+- There is a hidden Easter Egg(Konami code) in the game. This will appear if the User types in the word "halloween" any time while playing the game.
 - The code for this has been separated into the easteregg.js file.
 
 ### Features still to implement
 
 #### Local storage
 
-I think it would be nice to store the high score of the user on their local system to keep track of their best scores.
+I think it would be nice to store the high score of the User on their local system to keep track of their best scores.
 
 #### Success sounds for cards matching
 
-The user might enjoy a sound that indicates that they have successfully made a match with their cards.
+The User might enjoy a sound that indicates that they have successfully made a match with their cards.
 
-## ![Pumpkin](assets/img/pumpkin_orange.svg) Technologies Used
+#### Background music
+
+The User might enjoy some spooky background music to set the mood, especially at the beginning.
+
+## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) Technologies Used
 
 ---
 
@@ -202,7 +209,7 @@ The user might enjoy a sound that indicates that they have successfully made a m
 - [Github](https://github.com/) was used to store and share all project code remotely.
 - [CorelDraw X8](https://www.coreldraw.com/) used to manipulate and change colours of the svg images used for the playing cards.
 
-## ![Pumpkin](assets/img/pumpkin_orange.svg) Testing
+## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) Testing
 
 ---
 
@@ -224,7 +231,7 @@ I tested the following browsers already installed on my computer:
 - Internet Explorer - none of the functionality or features were working.
 - Opera - Game pages and boards worked as looked as expected. The index page buttons were not styled as expected but still functioned.
 
-I tested the game on my Ipad in Safari - the index page looked and worked as expected, but the game board did not. When the cards "flipped" over the face cards were not visible. This is a bug that will need to be sorted out in the near future so that it will be playable by Mac users.
+I tested the game on my Ipad in Safari - the index page looked and worked as expected, but the game board did not. When the cards "flipped" over the face cards were not visible. This is a bug that will need to be sorted out in the near future so that it will be playable by Mac Users.
 
 ##### User Facing
 
@@ -235,7 +242,7 @@ I tested the game on my Ipad in Safari - the index page looked and worked as exp
 
 ###### "Reset" button
 
-- The reset button is designed to show a tooltip when hovered letting the user know what happens if they press the button.
+- The reset button is designed to show a tooltip when hovered letting the User know what happens if they press the button.
 - The tooltip had been styled with CSS and was checked manually by hovering over it with a mouse to check that this behaved as expected.
 - On pressing the button several Javascript functions take over and do the following:
   1. "Unflips" all the cards ie. only the back of the cards are visible :arrow_right: this was checked visually when clicking the reset button.
@@ -246,24 +253,24 @@ I tested the game on my Ipad in Safari - the index page looked and worked as exp
 
 ###### Sound button
 
-- The sound button toggles between off and on using JavaScript, allowing the user to switch off the sound and switch it on again. :arrow_right: This was checked by starting a game and flipping a card to hear the sound, then pushing the button and:
+- The sound button toggles between off and on using JavaScript, allowing the User to switch off the sound and switch it on again. :arrow_right: This was checked by starting a game and flipping a card to hear the sound, then pushing the button and:
   1. Visually checking that the word had changed from "On" to "Off" and back again if pressed again.
   2. Comparing the "On" to be with sound and then the "Off" to be with no sound.
 
 ###### "Moves" Counter
 
-- This is an information point for the user that counts the number of moves it is taking the user to complete the game board.
-- The counter "counts" every pair of cards that are flipped by the user. ie two cards need to be flipped in order to count as one move.
-- This was a bit of JavaScript and was visually tested on the user side :arrow_right: by selecting one card and then another and making sure that it only went up by an increment of one for every pair turned over whether they were matching or not.
+- This is an information point for the User that counts the number of moves it is taking the User to complete the game board.
+- The counter "counts" every pair of cards that are flipped by the User. ie two cards need to be flipped in order to count as one move.
+- This was a bit of JavaScript and was visually tested on the User side :arrow_right: by selecting one card and then another and making sure that it only went up by an increment of one for every pair turned over whether they were matching or not.
 - :arrow_right: Also clicked multiple cards in a row to make sure that it was only counting the flipped cards and not accidental clicks as well.
 
 ###### "Change level"
 
-- This is a simple dropdown menu that allows the user to navigate at any time before, during or after a game to a different level.
+- This is a simple dropdown menu that allows the User to navigate at any time before, during or after a game to a different level.
 - As the dropdown list was hidden from view a little JavaScript was used to make it visible again when hovering over the change level button.
-- Also the dropdown menu also had to be hidden again if the user did not make a selection and  moved the mouse off the button.
+- Also the dropdown menu also had to be hidden again if the User did not make a selection and  moved the mouse off the button.
 - :arrow_right: Functionality was tested visually by hovering over the dropdown menu, moving the mouse away to check that the menu became hidden again,
-- :arrow_right: Links were tested to make sure that they were working and took the user to the selected game board when a selection was made.
+- :arrow_right: Links were tested to make sure that they were working and took the User to the selected game board when a selection was made.
 
 ###### Timer
 
@@ -273,7 +280,7 @@ I tested the game on my Ipad in Safari - the index page looked and worked as exp
 
 ###### Konami Code
 
-This was added to the game as a bit of hidden fun for the user. :arrow_right: This was tested by entering the secret code: "halloween" at random junctures to see that it popped up and closeable again. Try it yourself :stuck_out_tongue_winking_eye:
+This was added to the game as a bit of hidden fun for the User. :arrow_right: This was tested by entering the secret code: "halloween" at random junctures to see that it popped up and closeable again. Try it yourself :stuck_out_tongue_winking_eye:
 
 ##### JavaScript
 
@@ -303,7 +310,22 @@ The following were used for checking my Javascript code:
 
 I did attempt to start my project using Test Driven Development by writing tests with Jasmine, but my inexperience and minimal understanding of this tool led to frustration and I was unable to write a passing test. I was informed that Jasmine is not the best tool to test DOM manipulation, which, for the most part what my game does.
 
-## ![Pumpkin](assets/img/pumpkin_orange.svg) Deployment
+### Bugs
+
+#### Current bugs
+
+- If the sound is switched off on the game and you change levels the sound comes back on.
+- If you drag the card while clicking the card the card will not flip over. Only allows flip on still click- this was a problem for my son who is not as controlled on a mouse as some.
+- Overclicking on cards does not stop the flip sound.
+- The timer does not go back to zero when the game is reset, however it does start counting again from zero, so does not impact game play.
+  
+#### Resolved bugs
+
+- There was a bug on the hard level that caused the cards to stay flipped even when they weren't matched. This was resolved when I moved all my code into one JS file.
+- When navigating to the easy level, the start modal kept popping up. This was resolved by seperating the html and making the modal the index page.
+- When moving the mouse after hovering over the dropdown list, the list would not go away if nothing was selected. This was resolved with a click function allowing the User to close the dropdown list again.
+
+## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) Deployment
 
 ---
 
@@ -329,7 +351,7 @@ To clone this project from GitHub:
          - git clone https://github.com/USERNAME/REPOSITORY
 7. Press Enter. Your local clone should be created.
 
-## ![Pumpkin](assets/img/pumpkin_orange.svg) Credits
+## ![Pumpkin](https://res.cloudinary.com/dgsqmdssi/image/upload/v1570621003/Hallowed-Hunt/Pumpkin_orange_anrehj.svg) Credits
 
 ---
 
@@ -354,5 +376,5 @@ To clone this project from GitHub:
 
 - Thanks to my family , who have spent long hours without my company while I studied and wrote this game. They were also the inspiration behind the game.
 - Thanks to A Greaves, who provided a beautiful template for writing this Readme - you are a master!
-- Thanks to my mentor Rahul who encouraged me to understand JavaScript and walked me through the tough days.
-
+- Thanks to my mentor Rahul who encouraged me to understand JavaScript code. and walked me through the tough days.
+  
