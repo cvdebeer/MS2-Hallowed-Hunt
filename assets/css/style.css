@@ -222,7 +222,7 @@ body {
 
 /* ------------------------------------------------------------Game board -----------------------------------
 copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty8qw-------------------------------*/
-.game {
+#easy-board .game {
     height: 640px;
     width: 640px;
     margin: auto;
@@ -231,7 +231,7 @@ copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watc
     background-color: #9F8656;
 }
 
-.game-card {
+#easy-board .game-card {
     width: calc(25% - 10px);
     height: calc(33% - 10px);
     margin: 5px;
@@ -254,7 +254,7 @@ copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watc
     -o-transform: scale(1);
 }
 
-.game-card:active {
+#easy-board .game-card:active {
     transform: scale(1.2);
     transition: transform 0.2s;
     -webkit-transform: scale(1.2);
@@ -283,7 +283,7 @@ copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watc
     -webkit-backface-visibility: hidden;
 }
 
-.game-card.flip {
+#easy-board .game-card.flip {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
@@ -299,7 +299,106 @@ copied and adjusted to suit purpose fom Code sketch https://www.youtube.com/watc
     -o-transform: rotateY(180deg);
 }
 
+/* Medium game board */
 
+#medium-board .game {
+    height: 640px;
+    width: 960px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #9F8656;
+}
+
+#medium-board .game-card {
+    width: calc(16.6% - 10px);
+    height: calc(33.3% - 10px);
+    margin: 5px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+#medium-board .game-card:active {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#medium-board .game-card.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+/* Hard Game board */
+#hard-board .game {
+    height: 850px;
+    width: 960px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #9F8656;
+}
+
+#hard-board .game-card {
+    width: calc(16.6% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+#hard-board .game-card:active {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#hard-board .game-card.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
 
 /*-------------------------------------------------------------------------------------------Modal Success--------------*/
 .modal-dialog {
