@@ -13,7 +13,7 @@ const modalCL = document.querySelector('#mdl-chg-lvl');
 const exit = document.querySelector('#mdl-exit');
 const easteregg = document.querySelector('#halloween');
 
-let easyDone = [];
+let cardCount = [];
 let count = 0;
 let sec = 0;
 let interval = 0;
@@ -73,13 +73,13 @@ function unFlip() {
 function stopClick() {
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
-    easyDone.push(cardOne);
-    easyDone.push(cardTwo);
-    if (easyDone.length === 12) {
+    cardCount.push(cardOne);
+    cardCount.push(cardTwo);
+
+    if (cardCount.length === cards.length) {
         successModal();
         resetTimer();
     }
-
     resetGameBoard();
 }
 
@@ -112,7 +112,7 @@ function shuffleCards() {
         card.classList.remove('flip');
     });
     cards.forEach(card => {
-        let randomMix = Math.floor(Math.random() * 12);
+        let randomMix = Math.floor(Math.random() * cards.length);
         card.style.order = randomMix;
     });
     resetTimer();
@@ -185,9 +185,7 @@ function mdlDropDownExit() {
 
 //this function shows the user the clue to the Konami code
 function showEasterEgg() {
-
     easteregg.classList.add('show');
-
     setTimeout(function () {
         easteregg.classList.remove('show');
     }, 10000)
@@ -210,3 +208,26 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 cards.forEach(card => card.addEventListener('click', startTimer));
 cards.forEach(card => card.addEventListener('click', countMoves));
 cards.forEach(card => card.addEventListener('click', playAudio));
+
+//This code was copied for the most part from a WesBos tutorial https://javascript30.com/ day 12
+// I adjusted the code to insert my own little pop up into the mix.
+
+const pressed = [];
+const secretCode = 'halloween';
+const dance = document.querySelector('.easteregg');
+const close = document.querySelector('.easter-close');
+
+window.addEventListener('keyup', (e) => {
+    console.log(e.key);
+    pressed.push(e.key);
+    pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+    if (pressed.join('').includes(secretCode)) {
+        dance.classList.add('show');
+        console.log(pressed);
+    }
+});
+
+function closeKonami() {
+    dance.classList.remove('show');
+}
+close.addEventListener('click', closeKonami);
