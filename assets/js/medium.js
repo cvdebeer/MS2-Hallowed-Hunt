@@ -24,6 +24,9 @@ let cardOne, cardTwo;
 // game starter modal
 $(gameIntro).modal('show');
 
+// showEasterEgg start function
+$(window).on('load', showEasterEgg);
+
 shuffleCards();
 
 // make the card flip- function used  from Code Sketch
@@ -120,6 +123,7 @@ function shuffleCards() {
     sec = 0;
     mediumDone = [];
     $(gameSuccess).modal('hide');
+    showEasterEgg();
 }
 
 //function to count the moves the player is making
