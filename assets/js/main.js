@@ -49,6 +49,9 @@ function flipCard() {
     cardTwo = this;
 
     matchChecking();
+
+
+
 }
 
 // this function will check if card one matched card Two-  function used  from Code Sketch
@@ -73,16 +76,19 @@ function unFlip() {
 function stopClick() {
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
+
+    checkSuccess();
+    resetGameBoard();
+}
+
+function checkSuccess() {
     cardCount.push(cardOne);
     cardCount.push(cardTwo);
-
     if (cardCount.length === cards.length) {
         successModal();
         resetTimer();
     }
-    resetGameBoard();
 }
-
 //- function used  from Code Sketch to lock the board
 function resetGameBoard() {
     [cardHasFlipped, blockOverClick] = [false, false];
@@ -121,7 +127,7 @@ function shuffleCards() {
     count = 0;
     moves.innerHTML = `MOVES: ${count}`;
     sec = 0;
-    easyDone = [];
+    cardCount = [];
     $(gameSuccess).modal('hide');
     showEasterEgg();
 }
