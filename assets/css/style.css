@@ -460,6 +460,11 @@ button.close span {
     text-shadow: 1px 1px#9F8656;
 }
 
+#mdl-exit {
+    text-decoration: none;
+    color: #17161A;
+}
+
 /* ----------------------------------------------------------------------------------Modal Intro--------*/
 
 .mdl-intr-hdr {

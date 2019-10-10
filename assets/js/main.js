@@ -177,10 +177,6 @@ function successModal() {
     $(gameSuccess).modal('show');
 }
 
-function exitGame() {
-    $(gameSuccess).modal('hide');
-}
-
 function mdlDropDown() {
     mdlDrops.forEach(drop => drop.classList.add('show'));
 }
@@ -207,7 +203,6 @@ modalCL.addEventListener('mouseover', mdlDropDown);
 sound.addEventListener('click', audioButton);
 reset.addEventListener('click', shuffleCards);
 modalReset.addEventListener('click', shuffleCards);
-exit.addEventListener('click', exitGame);
 modalCL.addEventListener('click', mdlDropDownExit);
 
 cards.forEach(card => card.addEventListener('click', flipCard));
